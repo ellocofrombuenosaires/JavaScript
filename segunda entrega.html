@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Monedas - Merryweather</title>
+  
+  <link rel="stylesheet" href="segunda entrega.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Merryweather</h1>
+    </header>
+
+    <main>
+      <section id="conversor-form">
+        <h2>Convertidor de Monedas</h2>
+        
+        <div class="form-group">
+          <label for="moneda">Seleccione la moneda a convertir:</label>
+          <select id="moneda">
+            <option value="tether">USDT</option>
+            <option value="bitcoin">BTC</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cantidad">Ingrese la cantidad:</label>
+          <input type="number" id="cantidad" placeholder="Cantidad" />
+        </div>
+
+        <button id="convertir-btn" class="btn">Convertir</button>
+      </section>
+
+      <section id="resultado" class="hidden">
+        <h3>Resultado de la Conversión</h3>
+        <p id="resultado-text"></p>
+        <button id="guardar-btn" class="btn">Guardar en la Bitácora</button>
+        <button id="continuar-btn" class="btn">Continuar</button>
+      </section>
+
+      <section>
+        <h2>Bitácora de Conversiones</h2>
+        <ul id="carrito"></ul>
+      </section>
+    </main>
+  </div>
+
+ 
+  <script src="segunda entrega.js"></script>
+</body>
+</html>
+
+</html>
+
