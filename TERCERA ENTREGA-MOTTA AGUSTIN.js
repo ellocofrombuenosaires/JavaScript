@@ -1,13 +1,11 @@
 
 
-// Monedas soportadas con sus ids para la API y nombres bonitos
-// Lista de monedas disponibles
 const monedas = [
     { id: "tether", nombre: "USDT" },
     { id: "bitcoin", nombre: "BTC" },
   ];
   
-  // Crear elementos HTML rápido
+
   function crearElemento(tipo, atributos = {}, texto = "") {
     const el = document.createElement(tipo);
     for (let key in atributos) {
@@ -76,7 +74,7 @@ const monedas = [
     mostrarBitacora();
   }
   
-  // Obtener precio con fetch
+
   function obtenerPrecio(moneda) {
     const url = `https://api.coingecko.com/api/v3/simple/price?ids=${moneda}&vs_currencies=ars`;
     return fetch(url)
@@ -85,7 +83,6 @@ const monedas = [
       .catch(() => null);
   }
   
-  // Convertir moneda
   function convertir() {
     const moneda = document.getElementById("moneda").value;
     const cantidad = parseFloat(document.getElementById("cantidad").value);
@@ -120,7 +117,7 @@ const monedas = [
     });
   }
   
-  // Mostrar bitácora guardada
+  
   function mostrarBitacora() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const ul = document.getElementById("carrito");
